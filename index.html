@@ -1,7 +1,7 @@
 <html>
 <head>
 <script>
-function evaluate() {
+function evaluateAnswers() {
 	var value;
 	for (var i = 0; i < questions.length; i++) {
 		var radios = document.getElementsByName("answer" + i.toString());
@@ -56,7 +56,9 @@ window.onload = function() {
 <body>
 <ol id="test">
 </ol>
-<input type="button" value="Evaluate" onclick="evaluate()">
+<input type="button" value="Evaluate" onclick="evaluateAnswers()">
 <span id="message"></span>
 </body>
 </html>
+
+
