@@ -58,6 +58,7 @@ window.onload = function() {
 		
 	}
 	else {
+		document.getElementById("buttondiv").removeAttribute("style");
 		for (var i = 0; i < questions.length; i++) {
 			radio.setAttribute("name", "answer" + i.toString());
 			radio.setAttribute("value", "yes");
@@ -73,7 +74,7 @@ window.onload = function() {
 <body>
 <ol id="test">
 </ol>
-<div style="display: none"><input type="button" value="Evaluate" onclick="evaluateAnswers()"></div>
+<div id="buttondiv" style="display: none"><input type="button" value="Evaluate" onclick="evaluateAnswers()"></div>
 </br>
 <span id="message">&nbsp;</span>
 </body>
