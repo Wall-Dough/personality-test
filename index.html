@@ -3,13 +3,14 @@
 <script>
 var loadInterval;
 var percentLoaded = 0;
-function loadResults() {
+function loadResults(value) {
 	loadInterval = setInterval(function() {
 		percentLoaded += Math.floor(Math.random() * 5) + 5;
 		if (percentLoaded > 100) {
 			document.getElementById("message").innerHTML = "DONE";
 			clearInterval(loadInterval);
 			loadInterval = 0;
+			window.location.href = window.location.href + "?result=" + value.toString();
 			return;
 		}
 		document.getElementById("message").innerHTML = "Wait... " + percentLoaded.toString() + "%";
@@ -34,7 +35,7 @@ function evaluateAnswers() {
 	}
 	value = questions.length - value;
 	document.getElementById("message").innerHTML = "Your results ID is " + value.toString();
-	loadResults();
+	loadResults(value);
 }
 function getURLParameter(name) {
   return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
