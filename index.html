@@ -10,9 +10,10 @@ function loadResults() {
 			document.getElementById("message").innerHTML = "DONE";
 			clearInterval(loadInterval);
 			loadInterval = 0;
+			return;
 		}
 		document.getElementById("message").innerHTML = "Wait... " + percentLoaded.toString() + "%";
-	}, 500);
+	}, 250);
 }
 
 function evaluateAnswers() {
