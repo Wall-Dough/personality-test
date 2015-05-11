@@ -5,7 +5,7 @@ var loadInterval;
 var percentLoaded = 0;
 function loadResults(value) {
 	loadInterval = setInterval(function() {
-		percentLoaded += Math.floor(Math.random() * 5) + 5;
+		percentLoaded += Math.floor(Math.random() * 5) + 10;
 		if (percentLoaded > 100) {
 			document.getElementById("message").innerHTML = "DONE";
 			clearInterval(loadInterval);
