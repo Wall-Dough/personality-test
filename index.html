@@ -7,7 +7,6 @@ function loadResults(value) {
 	loadInterval = setInterval(function() {
 		percentLoaded += Math.floor(Math.random() * 5) + 10;
 		if (percentLoaded > 100) {
-			document.getElementById("message").innerHTML = "DONE";
 			clearInterval(loadInterval);
 			loadInterval = 0;
 			window.location.href = window.location.href + "?result=" + value.toString();
