@@ -6,7 +6,7 @@ function loadResults(value) {
 		if (percentLoaded > 100) {
 			clearInterval(loadInterval);
 			loadInterval = 0;
-			window.location.href = window.location.href + "?result=" + value.toString();
+			window.location.href = stripURLParameters() + "?result=" + value.toString();
 			return;
 		}
 		document.getElementById("message").innerHTML = "Wait... " + percentLoaded.toString() + "%";
