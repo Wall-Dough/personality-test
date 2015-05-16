@@ -40,7 +40,7 @@ function evaluateAnswers() {
 	loadResults(value);
 }
 
-function stripURLParamaters() {
+function stripURLParameters() {
 	var url = window.location.href;
 	var end = url.indexOf("?");
 	if (end > -1) {
