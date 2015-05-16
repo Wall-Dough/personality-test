@@ -40,6 +40,15 @@ function evaluateAnswers() {
 	loadResults(value);
 }
 
+function submitRating() {
+	var radios = document.getElementsByName("rating");
+	for (var i = 0; i < radios.length; i++) {
+		if (radios[i].checked) {
+			window.location.href = stripURLParameters() + radios[i].value;
+		}
+	}
+}
+
 function stripURLParameters() {
 	var url = window.location.href;
 	var end = url.indexOf("?");
