@@ -44,7 +44,7 @@ function submitRating() {
 	var radios = document.getElementsByName("rating");
 	for (var i = 0; i < radios.length; i++) {
 		if (radios[i].checked) {
-			window.location.href = stripURLParameters() + radios[i].value;
+			window.location.href = stripURLParameters() + "?rating=" + radios[i].value;
 		}
 	}
 }
