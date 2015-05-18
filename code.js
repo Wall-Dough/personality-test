@@ -101,7 +101,7 @@ window.onload = function() {
 		a2.setAttribute("href", "https://drive.google.com/file/d/0B2nuC1181x1LczVKYWhVdjd2dmM/view?usp=sharing");
 		a2.innerHTML = "Penn & Teller - Personality Tests (Video) [Explicit]";
 		p3.appendChild(a2);
-		messageDiv(p3);
+		messageDiv.appendChild(p3);
 	}
 	else {
 		document.getElementById("buttondiv").removeAttribute("style");
