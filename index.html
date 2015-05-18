@@ -1,39 +1,40 @@
 <html>
 <head>
-<script src="code.js">
-
-</script>
+  <title>Personality Test</title>
+  <script src="code.js"></script>
 </head>
 <body style="font-family: sans-serif">
-<ol id="test">
-</ol>
-<div id="buttondiv" style="display: none"><input type="button" value="Evaluate" onclick="evaluateAnswers()"></div>
-</br>
-<div style="float: left; height: 10px; width: 5%;"></div>
-<div style="float: left; width: 50%;">
-<p id="message">&nbsp;</p>
-<table id="analysisRating" style="display: none;">
-  <tr>
-    <td colspan="5"><strong>How much do you agree with this analysis?</strong></td>
-  </tr>
-  <tr>
-    <td><center>Strongly Disagree&nbsp;</center></td>
-    <td><center>&nbsp;Disagree&nbsp;</center></td>
-    <td><center>&nbsp;Indifferent&nbsp;</center></td>
-    <td><center>&nbsp;Agree&nbsp;</center></td>
-    <td><center>&nbsp;Strongly Agree&nbsp;</center></td>
-  </tr>
-  <tr>
-    <td><center><input type="radio" name="rating" value="1"></center></td>
-    <td><center><input type="radio" name="rating" value="2"></center></td>
-    <td><center><input type="radio" name="rating" value="3"></center></td>
-    <td><center><input type="radio" name="rating" value="4"></center></td>
-    <td><center><input type="radio" name="rating" value="5"></center></td>
-  </tr>
-  <tr>
-    <td colspan="5"><center><input type="button" value="Submit" onclick="submitRating()"></center></td>
-  </tr>
-</table>
-
+  <div style="float: left; height: 10px; width: 5%;"></div>
+  <div style="float: left; width: 50%;">
+    <ol id="test" style="display: none;">
+    </ol>
+    <div id="buttondiv" style="display: none;">
+      <input type="button" value="Evaluate" onclick="evaluateAnswers()">
+    </div>
+    </br>
+    <p id="message">&nbsp;</p>
+    <table id="analysisRating" style="display: none;">
+      <tr>
+        <td colspan="5"><strong>How much do you agree with this analysis?</strong></td>
+      </tr>
+      <tr>
+        <td><center>Strongly Disagree&nbsp;</center></td>
+        <td><center>&nbsp;Disagree&nbsp;</center></td>
+        <td><center>&nbsp;Indifferent&nbsp;</center></td>
+        <td><center>&nbsp;Agree&nbsp;</center></td>
+        <td><center>&nbsp;Strongly Agree&nbsp;</center></td>
+      </tr>
+      <tr>
+        <td><center><input type="radio" name="rating" value="1"></center></td>
+        <td><center><input type="radio" name="rating" value="2"></center></td>
+        <td><center><input type="radio" name="rating" value="3"></center></td>
+        <td><center><input type="radio" name="rating" value="4"></center></td>
+        <td><center><input type="radio" name="rating" value="5"></center></td>
+      </tr>
+      <tr>
+        <td colspan="5"><center><input type="button" value="Submit" onclick="submitRating()"></center></td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
