@@ -88,7 +88,7 @@ window.onload = function() {
 		var phrases = ["", "strongly disagreed with", "disagreed with", "were indifferent about the accuracy of", "agreed with", "strongly agreed with"];
 		var messageDiv = document.getElementById("message");
 		var p1 = document.createElement("p");
-		p1.innerHTML = "You said that you " + phrases[rating] + " this analysis. Actually, this was not an analysis at all. Your responses to the questions had no effect on the results of this personality test. Everyone who has taken this test has received the same response.";
+		p1.innerHTML = "You said that you " + phrases[rating] + " this analysis. Actually, this was not an analysis at all. Your responses to the questions had no effect on the results of this personality test. Everyone who has taken this test has received the same response. Follow the links below for more information.";
 		messageDiv.appendChild(p1);
 		var p2 = document.createElement("p");
 		var a1 = document.createElement("a");
