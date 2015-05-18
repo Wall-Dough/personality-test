@@ -78,8 +78,30 @@ var radio = document.createElement("input");
 radio.setAttribute("type", "radio");
 var innerHTML;
 window.onload = function() {
-	if (resultFound) {
-		document.getElementById("message").innerHTML = "You have a strong need for other people to like you and for them to admire you. You have a tendency to be critical of yourself. You have a great deal of unused capacity, which you have not turned to your advantage. Although you have some personality weaknesses, you are generally able to compensate for them. Disciplined and controlled on the outside, you tend to be worrisome and insecure on the inside. At times you have serious doubts as to whether you have made the right decision or done the right thing. You prefer a certain amount of change and variety and become dissatisfied when restricted or limited. You pride yourself as being an independent thinker and do not accept other's opinions without satisfactory proof. You have found it unwise to be too open in revealing yourself to others. At times you are extroverted, friendly, and sociable; at other times you are introverted and reserved. Some of your goals tend to be somewhat unrealistic.";
+	if (getURLParameter("result") != null) {
+		var p = document.createElement("p");
+		p.innerHTML = "You have a strong need for other people to like you and for them to admire you. You have a tendency to be critical of yourself. You have a great deal of unused capacity, which you have not turned to your advantage. Although you have some personality weaknesses, you are generally able to compensate for them. Disciplined and controlled on the outside, you tend to be worrisome and insecure on the inside. At times you have serious doubts as to whether you have made the right decision or done the right thing. You prefer a certain amount of change and variety and become dissatisfied when restricted or limited. You pride yourself as being an independent thinker and do not accept other's opinions without satisfactory proof. You have found it unwise to be too open in revealing yourself to others. At times you are extroverted, friendly, and sociable; at other times you are introverted and reserved. Some of your goals tend to be somewhat unrealistic.";
+		document.getElementById("message").appendChild(p);
+	}
+	else if (getURLParameter("rating") != null) {
+		var rating = parseInt(getURLParameter("rating"));
+		var phrases = ["", "strongly disagreed with", "disagreed with", "were indifferent about the accuracy of", "agreed with", "strongly agreed with"];
+		var messageDiv = document.getElementById("message");
+		var p1 = document.createElement("p");
+		p1.innerHTML = "You said that you " + phrases[rating] + " this analysis. Actually, this was not an analysis at all. Your responses to the questions had no effect on the results of this personality test. Everyone who has taken this test has received the same response.";
+		messageDiv.appendChild(p1);
+		var p2 = document.createElement("p");
+		var a1 = document.createElement("a");
+		a1.setAttribute("href", "http://en.wikipedia.org/wiki/Barnum_effect");
+		a1.innerHTML = "Barnum/Forer Effect (Wikipedia)";
+		p2.appendChild(a1);
+		messageDiv.appendChild(p2);
+		var p3 = document.createElement("p");
+		var a2 = document.createElement("a");
+		a2.setAttribute("href", "https://drive.google.com/file/d/0B2nuC1181x1LczVKYWhVdjd2dmM/view?usp=sharing");
+		a2.innerHTML = "Penn & Teller - Personality Tests (Video) [Explicit]";
+		p3.appendChild(a2);
+		messageDiv(p3);
 	}
 	else {
 		document.getElementById("buttondiv").removeAttribute("style");
