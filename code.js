@@ -82,6 +82,7 @@ window.onload = function() {
 		var p = document.createElement("p");
 		p.innerHTML = "You have a strong need for other people to like you and for them to admire you. You have a tendency to be critical of yourself. You have a great deal of unused capacity, which you have not turned to your advantage. Although you have some personality weaknesses, you are generally able to compensate for them. Disciplined and controlled on the outside, you tend to be worrisome and insecure on the inside. At times you have serious doubts as to whether you have made the right decision or done the right thing. You prefer a certain amount of change and variety and become dissatisfied when restricted or limited. You pride yourself as being an independent thinker and do not accept other's opinions without satisfactory proof. You have found it unwise to be too open in revealing yourself to others. At times you are extroverted, friendly, and sociable; at other times you are introverted and reserved. Some of your goals tend to be somewhat unrealistic.";
 		document.getElementById("message").appendChild(p);
+		document.getElementById("analysisRating").removeAttribute("style");
 	}
 	else if (getURLParameter("rating") != null) {
 		var rating = parseInt(getURLParameter("rating"));
