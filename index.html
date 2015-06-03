@@ -2,10 +2,11 @@
 <head>
   <title>Personality Test</title>
   <script src="code.js"></script>
+  <link href="styles.css" rel="stylesheet"></link>
 </head>
-<body style="font-family: sans-serif">
+<body>
   <div style="float: left; height: 10px; width: 5%;"></div>
-  <div style="float: left; width: 50%;">
+  <div id="content" style="float: left; width: 50%;">
     <ol id="test" style="display: none;">
     </ol>
     <div id="buttondiv" style="display: none;">
@@ -14,7 +15,8 @@
     </br>
     <p id="message">&nbsp;</p>
     <div id="analysisRating" style="display: none;">
-      <iframe src="https://docs.google.com/forms/d/10EkkZieWvulTMydQqEcDIv18RTHYrjl1WAVy7R3lLbU/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    	<center><input type="button" onclick="ratingSubmitted()" value="Click here after submitting the following form:" /></center>
+    	<iframe src="https://docs.google.com/forms/d/10EkkZieWvulTMydQqEcDIv18RTHYrjl1WAVy7R3lLbU/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
     </div>
   </div>
 </body>
