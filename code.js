@@ -92,7 +92,7 @@ window.onload = function() {
 		var p1 = document.createElement("p");
 		p1.innerHTML = "Below you see what other people thought about this analysis. Actually, this was not an analysis at all. Your responses to the questions had no effect on the results of this personality test. Everyone who has taken this test has received the same response. Follow the links below for more information.<br>";
 		// EMBED SURVEY RESULTS BELOW!!!!!!
-		p1.innerHTML += '<iframe src="https://docs.google.com/spreadsheets/d/1-X9xE6pY157hGUirCbsAfjUVt4GhPGV_RmHhgj-gsUA/pubhtml?gid=1881708197&amp;single=true&amp;widget=true&amp;headers=false"></iframe>';
+		p1.innerHTML += '<iframe width="350" height="225" src="https://docs.google.com/spreadsheets/d/1-X9xE6pY157hGUirCbsAfjUVt4GhPGV_RmHhgj-gsUA/pubhtml?gid=1881708197&amp;single=true&amp;widget=true&amp;headers=false"></iframe>';
 		messageDiv.appendChild(p1);
 		var p2 = document.createElement("p");
 		var a1 = document.createElement("a");
