@@ -40,13 +40,8 @@ function evaluateAnswers() {
 	loadResults(value);
 }
 
-function submitRating() {
-	var radios = document.getElementsByName("rating");
-	for (var i = 0; i < radios.length; i++) {
-		if (radios[i].checked) {
-			window.location.href = stripURLParameters() + "?rating=" + radios[i].value;
-		}
-	}
+function ratingSubmitted() {
+	window.location.href = stripURLParameters() + "?rated=1";
 }
 
 function stripURLParameters() {
@@ -79,17 +74,25 @@ radio.setAttribute("type", "radio");
 var innerHTML;
 window.onload = function() {
 	if (getURLParameter("result") != null) {
+		var message = document.getElementById("message");
+		var center = document.createElement("center");
+		var h2 = document.createElement("h2");
+		h2.innerHTML = "RESULT";
+		center.appendChild(h2);
+		message.appendChild(center);
 		var p = document.createElement("p");
 		p.innerHTML = "You have a strong need for other people to like you and for them to admire you. You have a tendency to be critical of yourself. You have a great deal of unused capacity, which you have not turned to your advantage. Although you have some personality weaknesses, you are generally able to compensate for them. Disciplined and controlled on the outside, you tend to be worrisome and insecure on the inside. At times you have serious doubts as to whether you have made the right decision or done the right thing. You prefer a certain amount of change and variety and become dissatisfied when restricted or limited. You pride yourself as being an independent thinker and do not accept other's opinions without satisfactory proof. You have found it unwise to be too open in revealing yourself to others. At times you are extroverted, friendly, and sociable; at other times you are introverted and reserved. Some of your goals tend to be somewhat unrealistic.";
-		document.getElementById("message").appendChild(p);
+		message.appendChild(p);
 		document.getElementById("analysisRating").removeAttribute("style");
 	}
-	else if (getURLParameter("rating") != null) {
+	else if (getURLParameter("rated") != null) {
 		var rating = parseInt(getURLParameter("rating"));
 		var phrases = ["", "strongly disagreed with", "disagreed with", "were indifferent about the accuracy of", "agreed with", "strongly agreed with"];
 		var messageDiv = document.getElementById("message");
 		var p1 = document.createElement("p");
-		p1.innerHTML = "You said that you " + phrases[rating] + " this analysis. Actually, this was not an analysis at all. Your responses to the questions had no effect on the results of this personality test. Everyone who has taken this test has received the same response. Follow the links below for more information.";
+		p1.innerHTML = "Below you see what other people thought about this analysis. Actually, this was not an analysis at all. Your responses to the questions had no effect on the results of this personality test. Everyone who has taken this test has received the same response. Follow the links below for more information.<br>";
+		// EMBED SURVEY RESULTS BELOW!!!!!!
+		p1.innerHTML += '<iframe src="https://docs.google.com/spreadsheets/d/1-X9xE6pY157hGUirCbsAfjUVt4GhPGV_RmHhgj-gsUA#gid=2068726949" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>';
 		messageDiv.appendChild(p1);
 		var p2 = document.createElement("p");
 		var a1 = document.createElement("a");
@@ -114,6 +117,7 @@ window.onload = function() {
 			innerHTML += radio.outerHTML + "NO" + "</li></br>";
 			document.getElementById("test").innerHTML += innerHTML;
 		}
+		document.getElementById("test").removeAttribute("style");
 		if (getURLParameter("debug") != null) {
 			answerAll();
 		}
