@@ -1,0 +1,10 @@
+body {
+	font-family: sans-serif;
+	background-color: #EEE;
+}
+
+#content {
+	background-color: #FFF;
+	min-height: 100%;
+	padding: 0px 20px;
+}
